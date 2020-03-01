@@ -13,22 +13,24 @@ export default new Router({
     {
       path: '/',
       name: 'Index',
-      component: Index
-    },
-
-    {
-      path: '/a',
-      name: 'A',
-      component: A
-      //  添加子路由
-    },
-    {
-      path: '/b',
-      component: B
-    },
-    {
-      path: '/a1',
-      component: A1
+      component: Index,
+      children: [
+        {
+          path: '/a',
+          name: 'A',
+          component: A
+          //  添加子路由
+        },
+        {
+          path: '/b',
+          component: B
+        },
+        {
+          path: '/a1',
+          component: A1
+        }
+      ]
     }
+
   ]
 })
