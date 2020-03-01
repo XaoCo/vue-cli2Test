@@ -19,18 +19,16 @@ export default new Router({
     {
       path: '/a',
       name: 'A',
-      component: A,
+      component: A
       //  添加子路由
-      children: [
-        {
-          path: '/a1',
-          component: A1
-        }
-      ]
     },
     {
       path: '/b',
       component: B
+    },
+    {
+      path: '/a1',
+      component: A1
     }
   ]
 })
